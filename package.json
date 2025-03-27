@@ -6,7 +6,8 @@
   "scripts": {
     "start:cli": "ts-node src/cli.ts",
     "start:server": "ts-node src/server.ts",
-    "start:price": "ts-node src/price.ts"
+    "start:price": "ts-node src/price.ts",
+    "start:balance": "ts-node src/balance.ts"
   },
   "keywords": [],
   "author": "",

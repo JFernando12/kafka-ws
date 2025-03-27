@@ -29,6 +29,20 @@ services:
       KAFKA_BROKER: kafka:9092
     command: ["npm", "run", "start:price"]
 
+  balance:
+    image: node:18
+    depends_on:
+      - kafka
+    container_name: wallet_watcher_balance
+    volumes:
+      - ./src:/src
+      - ./package.json:/package.json
+      - ./node_modules:/node_modules
+      - ./tsconfig.json:/tsconfig.json
+    environment:
+      KAFKA_BROKER: kafka:9092
+    command: ["npm", "run", "start:balance"]
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.4
     environment:
