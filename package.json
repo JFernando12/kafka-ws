@@ -1,0 +1,25 @@
+{
+  "name": "kafka-ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:cli": "ts-node src/cli.ts",
+    "start:server": "ts-node src/server.ts",
+    "start:price": "ts-node src/price.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@binance/connector": "^3.6.1",
+    "kafkajs": "^2.2.4",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.0",
+    "ts-node": "^10.9.2"
+  }
+}
